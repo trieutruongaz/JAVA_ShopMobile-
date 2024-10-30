@@ -1,0 +1,244 @@
+/* General Header Styling */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #e3e6f3; /* Adjust this color as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Keeps the header fixed at the top */
+    top: 0;
+    z-index: 1000;
+}
+
+#header a {
+    text-decoration: none;
+    color: #333; /* Text color */
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+#header .logo {
+    max-height: 60px;
+}
+
+/* Main Menu Styling */
+#navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    position: relative; /* Required for sub-menu positioning */
+}
+
+/* Active and Hover States */
+#navbar a.active {
+    color: #007bff; /* Active link color */
+    font-weight: bold;
+}
+
+#navbar li:hover > a {
+    color: #007bff; /* Hover color */
+}
+
+/* Sub-menu Styling */
+#navbar .main-menu {
+    position: relative;
+    display: inline-block;
+}
+
+#navbar .main-menu .sub-name {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff; /* White background for dropdown */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px; /* Fixed width for dropdown */
+    z-index: 999; /* Ensure it is above other content */
+}
+
+#navbar .main-menu:hover .sub-name {
+    display: block; /* Show on hover */
+}
+
+#navbar .sub-name li {
+    padding: 10px;
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+#navbar .sub-name li:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+#navbar .sub-name li a {
+    display: block;
+    padding: 10px;
+    color: #333; /* Sub-menu link color */
+}
+
+/* Icon Styling */
+#navbar li a i {
+    font-size: 20px;
+    color: #333; /* Icon color */
+}
+
+#navbar li a:hover i {
+    color: #007bff; /* Icon hover color */
+}
+
+/* Login/Logout Styling */
+#navbar li a {
+    font-weight: normal; /* Default weight for links */
+}
+
+#navbar li a:hover {
+    color: #007bff; /* Hover color for links */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column; /* Stack items vertically */
+        background-color: #fff; /* White background */
+        position: absolute; /* Position below header */
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none; /* Initially hidden */
+    }
+
+    #navbar li {
+        text-align: center; /* Center text */
+        width: 100%; /* Full width */
+        padding: 10px 0;
+    }
+
+    #header {
+        flex-direction: column; /* Stack header elements */
+    }
+
+    #navbar.active {
+        display: flex; /* Show navbar when active */
+    }
+
+    #navbar .main-menu .sub-name {
+        position: static; /* Reset position for mobile */
+        width: 100%; /* Full width */
+        box-shadow: none; /* No shadow on mobile */
+    }
+
+    #navbar .main-menu .sub-name li {
+        padding: 10px; /* Consistent padding */
+    }
+}
+
+/* Navigation items styling */
+.nav-search,
+.nav-cart {
+    position: relative; /* Relative positioning for child elements */
+    margin: 0 15px; /* Space between navigation items */
+}
+
+/* Icon link styling */
+.nav-icon-item {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    color: #333; /* Default icon color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for navigation icons */
+.nav-icon-item:hover {
+    color: #E63946; /* Change color on hover */
+}
+
+/* Icon styling */
+.icon {
+    font-size: 24px; /* Size of the icons */
+}
+
+/* Count box styling */
+.count-box {
+    position: absolute; /* Positioning the count box */
+    top: -5px; /* Adjust top position */
+    right: -10px; /* Adjust right position */
+    background-color: #FFD700; /* Yellow background */
+    color: #000; /* Black text color */
+    border-radius: 50%; /* Make it circular */
+    padding: 5px; /* Padding for better appearance */
+    font-weight: bold; /* Bold text */
+    font-size: 14px; /* Font size */
+    min-width: 20px; /* Minimum width to ensure it's visible */
+    height: 20px; /* Set height to make it circular */
+    display: flex; /* Use flex for centering content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Responsive styling for navigation items */
+@media (max-width: 768px) {
+    .nav-search,
+    .nav-cart {
+        margin: 0 10px; /* Reduce margin on smaller screens */
+    }
+
+    .icon {
+        font-size: 20px; /* Reduce icon size on smaller screens */
+    }
+}
+
+
+/* Navigation items styling */
+.nav-search,
+.nav-cart {
+    position: relative; /* Relative positioning for child elements */
+    margin: 0 15px; /* Space between navigation items */
+}
+
+/* Icon link styling */
+.nav-icon-item {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    color: #333; /* Default icon color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for navigation icons */
+.nav-icon-item:hover {
+    color: #E63946; /* Change color on hover */
+}
+
+/* Icon styling */
+.icon {
+    font-size: 28px; /* Increase icon size */
+    position: relative; /* Ensure the icon has a position for the count box */
+}
+
+/* Count box styling */
+.count-box {
+    position: absolute; /* Positioning the count box */
+    top: -10px; /* Adjust top position */
+    right: -15px; /* Adjust right position */
+    background-color: #FFD700; /* Yellow background */
+    color: #000; /* Black text color */
+    border-radius: 50%; /* Make it circular */
+    padding: 5px; /* Padding for better appearance */
+    font-weight: bold; /* Bold text */
+    font-size: 16px; /* Increase font size for better visibility */
+    min-width: 24px; /* Minimum width to ensure it's visible */
+    height: 24px; /* Increase height for better circular shape */
+    display: flex; /* Use flex for centering content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
