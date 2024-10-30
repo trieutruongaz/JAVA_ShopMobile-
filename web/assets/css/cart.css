@@ -1,0 +1,150 @@
+/* Page Header Styling */
+#page-header {
+    background: url('your-background-image.jpg') center/cover no-repeat;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+#page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay effect */
+    z-index: 1;
+}
+
+#page-header h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+#page-header p {
+    font-size: 1.2rem;
+    z-index: 2;
+    position: relative;
+    color: #ddd;
+    letter-spacing: 1px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #page-header {
+        padding: 80px 0;
+    }
+
+    #page-header h2 {
+        font-size: 2.5rem;
+    }
+
+    #page-header p {
+        font-size: 1rem;
+    }
+}
+
+/* Updated Cart Add Section for Flex Layout */
+#cart-add {
+    display: flex;
+    justify-content: space-between; /* Aligns items to the left and right */
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Coupon Section */
+.coupon {
+    flex: 1; /* Allows it to take available space */
+    margin-right: 20px; /* Adds space between coupon and total section */
+}
+
+.coupon h3 {
+    margin-bottom: 10px; /* Margin below the heading */
+}
+
+.coupon input {
+    padding: 10px;
+    width: calc(100% - 20px); /* Full width minus padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 10px; /* Added margin below the input for spacing */
+}
+
+.coupon button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.coupon button:hover {
+    background-color: #4cae4c;
+}
+
+/* Subtotal Section */
+.subtotal {
+    flex: 1; /* Allows it to take available space */
+}
+
+.subtotal h3 {
+    margin-bottom: 10px; /* Margin below the heading */
+}
+
+.subtotal table {
+    width: 100%; /* Full width of the container */
+}
+
+.subtotal table td {
+    padding: 10px 0; /* Padding for table cells */
+    font-size: 1rem;
+}
+
+.subtotal table td:first-child {
+    font-weight: bold; /* Bold font for the first column */
+    text-align: left; /* Left-align text */
+}
+
+.subtotal table td:last-child {
+    text-align: right; /* Right-align text */
+}
+
+.subtotal a.btn {
+    display: inline-block; /* Inline-block for button */
+    margin-top: 20px; /* Margin above the button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #5cb85c; /* Button background color */
+    color: #fff; /* Text color */
+    text-decoration: none; /* No underline */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.subtotal a.btn:hover {
+    background-color: #4cae4c; /* Darker shade on hover */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    #cart-add {
+        flex-direction: column; /* Stack sections vertically on small screens */
+    }
+    .coupon {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add space below coupon */
+    }
+}
